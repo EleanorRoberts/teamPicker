@@ -1,0 +1,118 @@
+$colourOne: #743DFB;
+$colourTwo: #5FFFB4;
+$colourThree: #FED631;
+$colourFour: #FF3366;
+$colourFive: #0F0028;
+$colourSix: #E0E8F2;
+
+
+* {
+  box-sizing: border-box;
+  font-family: "Space Grotesk", monospace;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-30deg, $colourOne, $colourTwo, $colourThree, $colourFour);
+  animation: gradient 30s ease infinite;
+  background-size: 5000% 5000%;
+}
+
+.content {
+  width: 60%;
+  background-color: $colourFive;
+  margin: 20px auto 0;
+  padding: 20px;
+  border-radius: 10px;
+  h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: calc(85px + 1vw);
+    text-align: center;
+    color: $colourFour;
+  }
+  input {
+    font-family: "Inter", sans-serif;
+    font-size: calc(12px + 1vw);
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: $colourSix;
+  }
+  #numberOfTeams {
+    box-shadow: inset 6px 6px 10px $colourTwo;
+  }
+  .btn.button {
+    background-color: $colourOne;
+    color: $colourSix;
+    font-family: "JetBrains Mono", sans-serif;
+    font-size: calc(12px + 1vw);
+    margin: 8px;
+    border: 5px solid $colourOne;
+    &:hover, &:focus {
+      border: 5px outset $colourTwo;
+    }
+    &:active {
+      border: 5px inset $colourTwo;
+    }
+  }
+  #removeVictim {
+    display: none;
+  }
+  .results {
+    h2 {
+      color: $colourTwo;
+      margin-top: 10px;
+    }
+    text-align: center;
+    ul {
+      margin: 25px 0 0;
+      padding: 0;
+      list-style-type: none;
+      li {
+        color: $colourOne;
+        background-color: $colourSix;
+      }
+    }
+  }
+  .errors {
+    color: $colourThree;
+    font-size: calc(12px + 1vw);
+  }
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+#apply-page-bg--left {
+  width: 100%;
+  left: 0;
+}
+
+#apply-page-bg--right {
+  width: 80%;
+  right: 0;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .content {
+    h1 {
+      font-size: calc(45px + 1vw);
+    }
+  }
+}

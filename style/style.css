@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+  font-family: "Space Grotesk", monospace;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-30deg, #743DFB, #5FFFB4, #FED631, #FF3366);
+  animation: gradient 30s ease infinite;
+  background-size: 5000% 5000%;
+}
+
+.content {
+  width: 60%;
+  background-color: #0F0028;
+  margin: 20px auto 0;
+  padding: 20px;
+  border-radius: 10px;
+}
+.content h1 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: calc(85px + 1vw);
+  text-align: center;
+  color: #FF3366;
+}
+.content input {
+  font-family: "Inter", sans-serif;
+  font-size: calc(12px + 1vw);
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #E0E8F2;
+}
+.content #numberOfTeams {
+  box-shadow: inset 6px 6px 10px #5FFFB4;
+}
+.content .btn.button {
+  background-color: #743DFB;
+  color: #E0E8F2;
+  font-family: "JetBrains Mono", sans-serif;
+  font-size: calc(12px + 1vw);
+  margin: 8px;
+  border: 5px solid #743DFB;
+}
+.content .btn.button:hover, .content .btn.button:focus {
+  border: 5px outset #5FFFB4;
+}
+.content .btn.button:active {
+  border: 5px inset #5FFFB4;
+}
+.content #removeVictim {
+  display: none;
+}
+.content .results {
+  text-align: center;
+}
+.content .results h2 {
+  color: #5FFFB4;
+  margin-top: 10px;
+}
+.content .results ul {
+  margin: 25px 0 0;
+  padding: 0;
+  list-style-type: none;
+}
+.content .results ul li {
+  color: #743DFB;
+  background-color: #E0E8F2;
+}
+.content .errors {
+  color: #FED631;
+  font-size: calc(12px + 1vw);
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+#apply-page-bg--left {
+  width: 100%;
+  left: 0;
+}
+
+#apply-page-bg--right {
+  width: 80%;
+  right: 0;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .content h1 {
+    font-size: calc(45px + 1vw);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
