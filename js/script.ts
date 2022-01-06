@@ -155,10 +155,3 @@ function displayVictimFates(fatesOfVictims: Array<Array<string>>): void {
     resultingTeams.innerHTML = output;
 }
 
-class Validator {
-    static validateName(name: string)
-    {
-        const regex = /^[A-Za-z \-\.]+$/;
-        return name.match(regex);
-    }
-}
